@@ -17,15 +17,16 @@ describe('Array tasks', function () {
 
 	it('should square all values in an array, returning a new array', function () {
 		var arr = [1, 2, 3, 4, 5]
+		console.log(arrayTasks.square(arr));
 		assert.deepEqual(arrayTasks.square(arr), [1, 4, 9, 16, 25])
 	})
 
-	xit('should calculate the sum of all values in an array', function () {
+	it('should calculate the sum of all values in an array', function () {
 		var arr = [1, 2, 3, 4, 5]
 		assert.equal(arrayTasks.sum(arr), 15)
 	})
 
-	xit('should find duplicate values in an array, returning a new array of the duplicates', function () {
+	it('should find duplicate values in an array, returning a new array of the duplicates', function () {
 		var arr = [1, 2, 3, 4, 4, 5, 5, 5]
 		assert.deepEqual(arrayTasks.findDuplicates(arr), [4, 5])
 	})

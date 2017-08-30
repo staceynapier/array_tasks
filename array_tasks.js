@@ -10,18 +10,26 @@ var arrayTasks = {
 	},
 
 	square: function (arr) {
-		var squared = arr.map( function( num ) {
-			return (num ** num);
-		} )
+		return arr.map(function(num) {
+			return Math.pow(num, 2)
+		})
 	},
 
-	// sum: function (arr) {
-		
-	// },
+	sum: function (arr) {
+		return arr.reduce( function(accumulator, num) {
+		  return accumulator + num;
+		}, 0)
+	},
 
-	// findDuplicates: function (arr) {
-		
-	// },
+	findDuplicates: function (arr) {
+		var duplicates = []
+		for (var num = 0; num < arr.length - 1; num++) {
+			if ( arr[num + 1] === arr[num]) {
+				duplicates.push(arr[num]);
+			}
+		}
+		return duplicates;
+	},
 
 	// removeAndClone: function (arr, valueToRemove) {
 		
