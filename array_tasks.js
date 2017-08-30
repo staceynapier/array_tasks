@@ -52,9 +52,15 @@ var arrayTasks = {
 		    return locations;
 	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
-		
-	// }
+	sumOfAllEvenNumbersSquared: function (arr) {
+		var total = 0;
+		arr.map( function(num) {
+			if (num % 2 === 0) {
+		  	total = (num * num) + total;
+			}
+		} )
+		return total;
+	}
 
 }
 
